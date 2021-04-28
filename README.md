@@ -17,3 +17,6 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 minikube start
 ```
+
+## Install kubectl
+https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
