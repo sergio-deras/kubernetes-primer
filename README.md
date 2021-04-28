@@ -30,3 +30,11 @@ If needed, delete what you have
 ```
 minikube delete
 ```
+
+# Commands to know more
+ ```
+ minikube
+ kubectl get nodes
+ minikube status
+ kubectl version
+ ```
