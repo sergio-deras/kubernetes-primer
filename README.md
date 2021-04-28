@@ -20,3 +20,13 @@ minikube start
 
 ## Install kubectl
 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+
+## Stop when done or pause
+```
+minikube stop
+minikube pause
+```
+If needed, delete what you have
+```
+minikube delete
+```
