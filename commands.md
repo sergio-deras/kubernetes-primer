@@ -57,3 +57,8 @@ kubectl get pod -o wide
 kubectl get secret
 ```
 
+## Service in minikube
+Type is LoadBalancer
+```
+minikube service <serviceID>
+```
