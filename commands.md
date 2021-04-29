@@ -5,6 +5,10 @@ Servers
 kubectl get nodes
 ```
 
+```
+kubectl get all
+```
+
 Deployment - Replicaset - Pod (Container abstraction)
 CRUD happens on the deployment level
 
@@ -46,5 +50,10 @@ kubectl get pod
 kubectl logs <podId>
 kubectl exec -it <podId> -- bin/bash
 kubectl get pod -o wide
+```
+
+## Secrets
+```
+kubectl get secret
 ```
 
