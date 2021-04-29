@@ -5,6 +5,10 @@ Servers
 kubectl get nodes
 ```
 
+```
+kubectl get all
+```
+
 Deployment - Replicaset - Pod (Container abstraction)
 CRUD happens on the deployment level
 
@@ -48,3 +52,13 @@ kubectl exec -it <podId> -- bin/bash
 kubectl get pod -o wide
 ```
 
+## Secrets
+```
+kubectl get secret
+```
+
+## Service in minikube
+Type is LoadBalancer
+```
+minikube service <serviceID>
+```
