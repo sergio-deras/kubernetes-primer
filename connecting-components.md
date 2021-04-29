@@ -29,7 +29,7 @@ spec:
       - name: nginx
         image: nginx:1.14.2
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 ```
 
 In the service by __spec - selector__
@@ -45,6 +45,8 @@ spec:
     app: nginx
   ports:
     - protocol: TCP
+      # Service listens to port 80 (real entry point)
       port: 80
-      targetPort: 9376
+      # Service sends the request to the Pod/ContainerPort 8080
+      targetPort: 8080
 ```      
