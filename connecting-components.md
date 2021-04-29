@@ -1,4 +1,4 @@
-metadata is added to components, they describe it.
+__metadata__ is added to components, it describe it.
 
 In the pod by __spec - template - metadata - labels__
 
@@ -33,7 +33,7 @@ spec:
 ```
 
 In the service by __spec - selector__
-spec - selector: Indicates the deployment AND PODS that the service manages
+__spec - selector__: Indicates the deployment AND PODS that the service manages, the service needs to know about the pods too.
 
 ```
 apiVersion: v1
