@@ -15,6 +15,7 @@ kubectl create deployment <nameId> --image=<imageId>
 ```
 kubectl get deployment <nameId>
 kubectl describe deployment <nameId>
+kubectl get deployment <nameId> -o yaml
 ```
 ```
 kubectl edit deployment <nameId>
@@ -22,7 +23,13 @@ kubectl edit deployment <nameId>
 ```
 kubectl delete deployment <nameId>
 ```
-Create or apply new changes
+
+Works for all the components in the file
+```
+kubectl delete -f <file>
+```
+
+Create or apply changes
 ```
 kubectl apply -f <file>.yml 
 ```
@@ -38,5 +45,6 @@ You will not define pods directly
 kubectl get pod
 kubectl logs <podId>
 kubectl exec -it <podId> -- bin/bash
+kubectl get pod -o wide
 ```
 
