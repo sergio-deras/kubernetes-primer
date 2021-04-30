@@ -66,6 +66,8 @@ An Ingress does not expose arbitrary ports or protocols. Exposing services other
 You __must have an Ingress controller to satisfy an Ingress__. Only creating an Ingress resource has no effect.
 You may need to deploy an Ingress controller such as ingress-nginx. You can choose from a number of Ingress controllers.
 
+In cloud, the LB will be available, but in Bare Metal, you need to implement the LB.
+
 https://kubernetes.io/docs/concepts/services-networking/ingress/
 
 
@@ -75,3 +77,27 @@ Type is LoadBalancer
 ```
 minikube service <serviceID>
 ```
+
+## Ingress Controlled in minikube
+```
+minikube addons enable ingress
+```
+
+
+## Enable minikube dashboard
+https://kubernetes.io/docs/tutorials/hello-minikube/
+This creates an ingress, so if you want to use yours, you might need to remove the existing one first
+```
+minikube dashboard &
+kubectl get validatingwebhookconfigurations
+kubectl delete validatingwebhookconfigurations ingress-nginx-admission
+kubectl get ingress -n kubernetes-dashboard
+sudo vi /etc/hosts
+```
+add <IP> <URL>
+
+```
+kubectl describe ingress -n kubernetes-dashboard
+```
+
+Get the Default backend, so you can redirect error or incorrect paths
