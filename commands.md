@@ -57,6 +57,19 @@ kubectl get pod -o wide
 kubectl get secret
 ```
 
+## Ingress
+Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. 
+Traffic routing is controlled by rules defined on the Ingress resource.
+
+An Ingress does not expose arbitrary ports or protocols. Exposing services other than HTTP and HTTPS to the internet typically uses a service of type Service.Type=NodePort or Service.Type=LoadBalancer.
+
+You __must have an Ingress controller to satisfy an Ingress__. Only creating an Ingress resource has no effect.
+You may need to deploy an Ingress controller such as ingress-nginx. You can choose from a number of Ingress controllers.
+
+https://kubernetes.io/docs/concepts/services-networking/ingress/
+
+
+
 ## Service in minikube
 Type is LoadBalancer
 ```
